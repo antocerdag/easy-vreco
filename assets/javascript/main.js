@@ -37,7 +37,7 @@ function initMap(){
 	  var inputOrigen =(document.getElementById("origen"));    
 	  var autocompleteOrigen = new google.maps.places.Autocomplete(inputOrigen);
 	  autocompleteOrigen.bindTo('bounds', map);
-	var botonRuta = document.getElementById("ruta"); // llamo a mi botón 
+	
 	var inputDestino = document.getElementById("destino");
 	var autocompleteDestino = new google.maps.places.Autocomplete(inputDestino);
 	autocompleteDestino.bindTo('bounds', map);
@@ -61,7 +61,10 @@ function initMap(){
           travelMode: 'DRIVING'
         }, function(response, status) {
           if (status === 'OK') {
-            directionsDisplay.setDirections(response);
+          	document.getElementById("ruta").addEventListener("click", function(){
+          		directionsDisplay.setDirections(response);
+          	})
+            
           } 
         });
  }
