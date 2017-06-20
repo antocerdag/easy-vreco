@@ -32,7 +32,8 @@ var latitud,longitud;
 	var funcionError = function(error){
 		alert("Tenemos un problema con encontrar tu ubicación");
 	}
-	//Librería gmps.
+	//Librería gmps. 
+	//Para el auto completado de la dirección
 	  var inputOrigen =(document.getElementById("origen"));    
 	  var autocompleteOrigen = new google.maps.places.Autocomplete(inputOrigen);
 	  autocompleteOrigen.bindTo('bounds', map);
