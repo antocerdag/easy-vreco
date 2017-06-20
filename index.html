@@ -2,19 +2,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Easy-Vreco</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link href=“https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans:300,400,700” rel=“stylesheet”>
-    <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css” integrity=“sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u” crossorigin=“anonymous”>
-    <link href=“https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css” rel=“stylesheet”>
-    <link rel=“stylesheet” href=“assets/css/style.css”>
+	<title>Easy-Bike</title>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<section id="botones"></section>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdne95Z4-LB56UWKqAtROqS3WGNVIaN0M&callback=initMap&libraries=places"></script>
-	 <script src=“https://use.fontawesome.com/be0dd1e218.js“></script>
-    <script src=“https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script>
-    <script src=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js” integrity=“sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa” crossorigin=“anonymous”></script>
-    <script src=“assets/javascript/main.js”></script>
+	<section>
+		<div class="container">
+			<div class="row seccion-input">
+				<div class="col-lg-3 col-sm-12">
+					<button id="encuentrame">Encuéntrame</button>
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					<label for="exampleInputEmail1">Origen</label>
+	   				 <input type="text" class="form-control" id="origen" aria-describedby="emailHelp" placeholder="Introduce una ubicación">
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					<label for="exampleInputEmail1">Destino</label>
+	  				<input type="text" class="form-control" id="destino" aria-describedby="emailHelp" placeholder="Introduce una ubicación">
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					<button id="ruta">Ruta</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12" id="map">
+							
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOvpgVzMzPVkg1YbgHAGKzE8LZuMX3q4Y&libraries=places"></script>
+	<script src="https://use.fontawesome.com/be0dd1e218.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="assets/javascript/main.js"></script>
 </body>
 </html>
