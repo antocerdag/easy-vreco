@@ -44,6 +44,7 @@ var latitud,longitud;
 
 	var directionsService = new google.maps.DirectionsService;
 	var directionsDisplay = new google.maps.DirectionsRenderer;
+	directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true}); 
 	directionsDisplay.setMap(map);
 
         var onChangeHandler = function() {
