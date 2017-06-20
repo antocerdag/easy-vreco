@@ -12,9 +12,9 @@ function initMap(){
 		}
 	}
 
-document.getElementById("encuentrame").addEventListener("click",buscar);
+	document.getElementById("encuentrame").addEventListener("click",buscar);
 
-var latitud,longitud;
+	var latitud,longitud;
 
 	var funcionExito = function(posicion){
 		latitud = posicion.coords.latitude;
@@ -37,7 +37,7 @@ var latitud,longitud;
 	  var inputOrigen =(document.getElementById("origen"));    
 	  var autocompleteOrigen = new google.maps.places.Autocomplete(inputOrigen);
 	  autocompleteOrigen.bindTo('bounds', map);
-
+	var botonRuta = document.getElementById("ruta"); // llamo a mi botón 
 	var inputDestino = document.getElementById("destino");
 	var autocompleteDestino = new google.maps.places.Autocomplete(inputDestino);
 	autocompleteDestino.bindTo('bounds', map);
