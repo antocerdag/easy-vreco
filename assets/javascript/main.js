@@ -32,5 +32,36 @@ var latitud,longitud;
 	var funcionError = function(error){
 		alert("Tenemos un problema con encontrar tu ubicación");
 	}
-}
+	//Librería gmps.
+	  var inputOrigen =(document.getElementById("origen"));    
+	  var autocompleteOrigen = new google.maps.places.Autocomplete(inputOrigen);
+	  autocompleteOrigen.bindTo('bounds', map);
+
+	var inputDestino = document.getElementById("destino");
+	var autocompleteDestino = new google.maps.places.Autocomplete(inputDestino);
+	autocompleteDestino.bindTo('bounds', map);
+
+	var directionsService = new google.maps.DirectionsService;
+	var directionsDisplay = new google.maps.DirectionsRenderer;
+	directionsDisplay.setMap(map);
+
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById("origen").addEventListener('change', onChangeHandler);
+        document.getElementById("destino").addEventListener('change', onChangeHandler);
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: document.getElementById("origen").value,
+          destination: document.getElementById("destino").value,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } 
+        });
+ }
+
 
